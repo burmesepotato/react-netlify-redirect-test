@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
@@ -18,8 +18,10 @@ function App() {
           </p>
           <Header />
 
-          <Route path='/' component={Home} exact />
-          <Route path='/about' component={About} />
+          <Switch>
+            <Route path='/' component={Home} exact />
+            <Route path='/about' component={About} />
+          </Switch>
 
           <a
             className="App-link"
